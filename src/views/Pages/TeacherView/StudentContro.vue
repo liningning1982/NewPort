@@ -13,6 +13,8 @@
                 size="large" no-data-text="服务器异常">
                 <el-option v-for="item in selectClassInfo" :key="item.key" :label="item.value" :value="item.value" />
             </el-select>
+            <el-input @input="selectStudentName()" v-model="inputId" placeholder="输入学生学号" size="large"
+                style="width:222.2px;margin-right:40px" />
             <el-input @input="selectStudentName()" v-model="inputName" placeholder="输入学生姓名" size="large"
                 style="width:222.2px;margin-right:40px" />
         </div>
@@ -77,6 +79,7 @@ import axios from 'axios'
 export default {
     data() {
         return {
+            inputId:'',
             inputName:'',
             selectSemester: '',
             backupStudentsHomeworkInfo: [],
@@ -134,6 +137,7 @@ export default {
             }
             if (this.selectState !== '') {
                 res = res.filter(item => item.sname.includes(this.inputName));
+                res = res.filter(item => item.id.includes(this.inputId));
             }
             this.backupStudentsHomeworkInfo = res;
         },

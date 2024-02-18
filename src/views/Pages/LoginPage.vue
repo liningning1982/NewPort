@@ -39,7 +39,8 @@ export default {
       form: {
         name: '',
         password: '',
-        role: ''
+        role: '',
+        username:'test'
       },
       rules: {
         name: [
@@ -58,7 +59,7 @@ export default {
 
   },
   methods: {
-    submitForm() {
+    submitForm1() {
       axios.get(this.BASE_URL + 'checkLogin', {
         params: {
           username: this.form.name,
@@ -92,6 +93,19 @@ export default {
             type: 'error',
           });
         });
+    },
+    submitForm(){
+      localStorage.setItem('loginData', JSON.stringify(this.form));
+      
+            ElMessage({
+              message: '登录成功',
+              type: 'success',
+            });
+            if(this.$store.state.returnUrl.length==0){
+              this.$router.push('/'); 
+              return
+            }
+            this.$router.push(this.$store.state.returnUrl); 
     }
   }
 
@@ -102,7 +116,7 @@ export default {
 
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .login-box {
   width: 350px;
   margin: 120px auto;

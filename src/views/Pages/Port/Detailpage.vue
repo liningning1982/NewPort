@@ -15,18 +15,18 @@
                                 <el-tag>所属课程:船舶</el-tag>
                             </div>
                             <p class="experiment-introduction">
-                                模拟客货滚装码头前沿作业区行人流、车流的交通行为，支持实时显示交通流密度。利用实验教学平台，观测码头前沿作业状态，探究功能区划分以及交通组织形式对客货滚装码头交通流的影响，掌握客货滚装码头前沿装卸工艺流程，认识客货滚装码头的绿色评价指标
+                                模拟客货滚装码头前沿作业区行人流、车流的交通行为，支持实时显示交通流密度。利用实验教学平台，观测码头前沿作业状态，探究功能区划分以及交通组织形式对客货滚装码头交通流的影响，掌握客货滚装码头前沿装卸工艺流程，认识客货滚装码头的绿色评价指标。
                             </p>
                             <el-button v-if="checkRole()" type="primary" icon="el-icon-edit"
                                 @click="doExperiment()">我要做实验</el-button>
                             <el-button v-if="!checkRole()" type="primary" icon="el-icon-edit"
-                                @click="doExperiment()">编辑实验</el-button>
+                                @click="doExperiment()">批改实验</el-button>
                         </el-col>
                         <el-col :span="9">
 
                             <div class="image-container">
                                 <el-image
-                                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 300px; height: 200px; object-fit: cover;"
+                                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 450px; height: 300px; object-fit: cover;"
                                 :src="imgurl"
                                 :fit="fit">
                               </el-image>
@@ -81,7 +81,7 @@
                 <el-col :span="16">
                     <el-card>
                         <div class="experiment-details">
-                            模拟客货滚装码头前沿作业区行人流、车流的交通行为，支持实时显示交通流密度。利用实验教学平台，观测码头前沿作业状态，探究功能区划分以及交通组织形式对客货滚装码头交通流的影响，掌握客货滚装码头前沿装卸工艺流程，认识客货滚装码头的绿色评价指标
+                            模拟客货滚装码头前沿作业区行人流、车流的交通行为，支持实时显示交通流密度。利用实验教学平台，观测码头前沿作业状态，探究功能区划分以及交通组织形式对客货滚装码头交通流的影响，掌握客货滚装码头前沿装卸工艺流程，认识客货滚装码头的绿色评价指标。
                         </div>
                     </el-card>
                 </el-col>
@@ -298,8 +298,8 @@ export default {
 }
 
 .pie-chart-container {
-    width: 400px;
-    height: 150px;
+    width: 600px;
+    height: 250px;
 }
 
 .experiment-introduction-container {

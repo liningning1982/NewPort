@@ -211,7 +211,7 @@ const routes = [
   {
     path: '/login',
     name: 'LoginPage',
-    cnName: '登陆页面',
+    cnName: '登录页面',
     hidden: true,
     component: () => import('../views/Pages/LoginPage.vue')
   }
