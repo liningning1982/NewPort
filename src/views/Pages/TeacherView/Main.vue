@@ -19,7 +19,7 @@
 
             <el-col :span="4">
               <el-button style="height:40px" size="middle" type="warning"
-                @click="downloadAllHomework()">下载全部实验</el-button>
+                @click="downloadAllHomework()">下载全部实验报告</el-button>
             </el-col>
           </el-row>
           <el-table :data="pagedTableData" :row-class-name="tableRowClassName">
@@ -43,7 +43,7 @@
                 <div class="button-group" style="text-align:center">
                   <el-button class="action-button" type="primary" @click="rating(scope.row)">查看实验结果</el-button>
                   <el-button class="action-button" type="success"
-                    @click="downloadHomeworkById(scope.row)">下载实验</el-button>
+                    @click="downloadHomeworkById(scope.row)">下载实验报告</el-button>
                   <el-button class="action-button" :type="isInt(scope.row.score) ? 'danger' : 'warning'"
                     @click="submit(scope.row)"> {{ isInt(scope.row.score) ? '重新评分' : '保存评分' }}</el-button>
                 </div>

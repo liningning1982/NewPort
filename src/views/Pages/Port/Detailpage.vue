@@ -20,7 +20,7 @@
                             <el-button v-if="checkRole()" type="primary" icon="el-icon-edit"
                                 @click="doExperiment()">我要做实验</el-button>
                             <el-button v-if="!checkRole()" type="primary" icon="el-icon-edit"
-                                @click="doExperiment()">批改实验</el-button>
+                                @click="doExperiment()">编辑实验</el-button>
                         </el-col>
                         <el-col :span="9">
 
@@ -31,7 +31,6 @@
                                 :fit="fit">
                               </el-image>
                               
-
                             </div>
 
                         </el-col>
@@ -41,12 +40,12 @@
                 </div>
             </el-card>
 
-
             <el-card class="rating-card">
                 <el-row :gutter="20">
 
                     <div class="rating-overview">
                         <el-col :span="8">
+                            <h2>难度系数</h2>
                             <div class="rating-score">
                                 <div class="score-big">4.7</div>
                                 <el-rate v-model="rating" show-score disabled></el-rate>
@@ -70,12 +69,7 @@
 
                     </div>
                 </el-row>
-
             </el-card>
-
-
-
-
 
             <el-row :gutter="20" style="margin-top: 20px;">
                 <el-col :span="16">
